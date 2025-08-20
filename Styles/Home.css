@@ -1,0 +1,293 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fffae3;
+    background-image: url('../Images/musamountain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#navBar {
+    position: fixed;
+    display: flex;
+    background-color: #facc58;
+    align-items: center;
+    height: 70px;
+    width: 100vw;
+    z-index: 1000;
+}
+#interactionList {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    font-size: 20px;
+    margin-right: 2.5vw;
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+    height: 100%;
+}
+#interactionList li {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    height: 100%;
+    cursor: pointer;
+}
+#interactionList li:hover{
+    background-color: #ffda7c;
+}
+#interactionList #activities {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+}
+#interactionList #activities:hover #dropdownmenu {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    max-width: 100%;
+    background-color: #fcd267;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+#interactionList #activities #dropdownmenu {
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    max-width: 100%;
+    background-color: #fcd267; */
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+#blackarrowhead {
+    width: 10px;
+    height: 10px;
+}
+#activities:hover #blackarrowhead {
+    transform: rotate(90deg);
+}
+#title {
+    text-align: center;
+    font-weight: lighter;
+    width: 300px;
+}
+#title a {
+    text-decoration: none;
+    color: black;
+}
+#content {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+    flex: 1;
+}
+#content #welcomeSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
+    
+}
+#content #welcomeSection #welcomeToEsesParagraph {
+    margin: 0px;
+    font-size: 120px;
+    color: white;
+}
+#content #welcomeSection #welcomeToEsesParagraphDiscription {
+    font-size: 30px;
+    color: white;
+}
+#ownerSection {
+    margin: 0px;
+    padding: 30px 0px 30px 0px;
+}
+#ownerSectionInner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 30px;
+    background-color: rgba(255, 218, 124, 0.8);
+}
+#ownerSectionTextDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+#ownerSectionTextDiv {
+    transform: translateY(50%);
+    transition: all 1s ease;
+    opacity: 0;
+}
+#ownerSectionTextDiv .animate {
+    transform: translateY(0%);
+    opacity: 1;
+}
+#ownerSectionText {
+    font-size: 30px;
+    line-height: 2;
+}
+#ownerSectionTitle {
+    margin-left: 15px;
+    font-size: 35px;
+    font-weight: bold;
+}
+#ownerSectionInner a img {
+    height: 65vh;
+    transform: translateX(-120%);
+    transition: all 1s ease;
+    opacity: 0;
+}
+#ownerSectionInner .animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+/* Catrina Section */
+#catrinaSection {
+    margin: 0px;
+    padding: 30px 0px 30px 0px;
+}
+#catrinaSectionInner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(255, 218, 124, 0.8);
+}
+#catrinaPoster {
+    margin-right: 30px;
+    height: 65vh;
+    width: 25vw;
+    transform: translate(120%);
+    transition: all 1s ease;
+    opacity: 0;
+}
+#catrinaSectionInner .animate {
+    transform: translate(0%);
+    opacity: 1;
+}
+#catrinaSectionTextDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 15px;
+}
+#catrinaSectionTextDiv {
+    transform: translateY(50%);
+    transition: all 1s ease;
+    opacity: 0;
+}
+#catrinaSectionTextDiv .animate{
+    transform: translateY(0%);
+    opacity: 1;
+}
+#catrinaSectionTitle {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+#catrinaSectionText {
+    font-size: 25px;
+    line-height: 2;
+}
+/* Conferences Section */
+#conferencesSection {
+    margin: 0px;
+    padding: 30px 0px 30px 0px;
+}
+#conferencesSectionInner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(255, 218, 124, 0.8);
+}
+#conferenceCollectivePhoto {
+    margin-left: 30px;
+    height: 65vh;
+    width: 50vw;
+    transform: translate(-120%);
+    transition: all 1s ease;
+    opacity: 0;
+}
+#conferencesSectionInner .animate {
+    transform: translate(0%);
+    opacity: 1;
+}
+#conferencesSectionTextDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 30px;
+    /* animation */
+    transform: translateY(50%);
+    transition: all 1s ease;
+    opacity: 0;
+}
+#conferencesSectionTextDiv .animate{
+    transform: translateY(0%);
+    opacity: 1;
+}
+#conferencesSectionTitle {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+#conferencesSectionText {
+    font-size: 25px;
+    line-height: 2;
+}
+/* Footer */
+#footer {
+    display: flex;
+    background-color: #facc58;
+    width: 100%;
+}
+#footer #aboutUs {
+    width: 50%;
+    margin-left: 10px;
+}
+#footer #aboutUs #aboutUsHeader {
+    margin-bottom: 0px;
+}
+#footer #aboutUs #aboutUsParagraph {
+    margin-top: 15px;
+}
+#footer #contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: auto;
+    margin-right: 20px;
+}
+#footer #contactInfo #contactInfoHeader {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 19.29px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
