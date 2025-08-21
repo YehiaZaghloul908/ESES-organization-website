@@ -26,11 +26,20 @@ body{
     width: 100vw;
     z-index: 1000;
 }
+#title {
+    text-align: center;
+    font-weight: lighter;
+    width: 300px;
+    font-size: clamp(5px, 3vw, 25px);
+}
+#title a {
+    text-decoration: none;
+    color: black;
+}
 #interactionList {
     display: flex;
     list-style-type: none;
-    gap: 50px;
-    font-size: 20px;
+    font-size: clamp(10px, 2vw, 20px);
     margin-right: 2.5vw;
     margin-left: auto;
     margin-top: 0px;
@@ -77,20 +86,11 @@ body{
     left: 0;
 }
 #blackarrowhead {
-    width: 10px;
-    height: 10px;
+    width: 100%;
+    height: 10%;
 }
 #activities:hover #blackarrowhead {
     transform: rotate(90deg);
-}
-#title {
-    text-align: center;
-    font-weight: lighter;
-    width: 300px;
-}
-#title a {
-    text-decoration: none;
-    color: black;
 }
 #content {
     padding: 0px;
@@ -113,11 +113,11 @@ body{
 }
 #content #welcomeSection #welcomeToEsesParagraph {
     margin: 0px;
-    font-size: 120px;
+    font-size: clamp(20px, 10vw, 120px);
     color: white;
 }
 #content #welcomeSection #welcomeToEsesParagraphDiscription {
-    font-size: 30px;
+    font-size: clamp(10px, 3vw, 30px);
     color: white;
 }
 #ownerSection {
@@ -127,7 +127,6 @@ body{
 #ownerSectionInner {
     display: flex;
     align-items: center;
-    height: 100%;
     padding-left: 30px;
     background-color: rgba(255, 218, 124, 0.8);
 }
@@ -146,17 +145,18 @@ body{
     transform: translateY(0%);
     opacity: 1;
 }
-#ownerSectionText {
-    font-size: 30px;
-    line-height: 2;
-}
 #ownerSectionTitle {
     margin-left: 15px;
-    font-size: 35px;
+    font-size: clamp(5px, 4vw, 35px);
     font-weight: bold;
 }
+#ownerSectionText {
+    font-size: clamp(5px, 3vw, 30px);
+    line-height: 2;
+}
 #ownerSectionInner a img {
-    height: 65vh;
+    height: auto;
+    width: clamp(100px, 20vw, 400px);
     transform: translateX(-120%);
     transition: all 1s ease;
     opacity: 0;
@@ -173,13 +173,12 @@ body{
 #catrinaSectionInner {
     display: flex;
     align-items: center;
-    height: 100%;
     background-color: rgba(255, 218, 124, 0.8);
 }
 #catrinaPoster {
     margin-right: 30px;
-    height: 65vh;
-    width: 25vw;
+    height: auto;
+    width: clamp(100px, 25vw, 500px);
     transform: translate(120%);
     transition: all 1s ease;
     opacity: 0;
@@ -205,12 +204,12 @@ body{
     opacity: 1;
 }
 #catrinaSectionTitle {
-    font-size: 35px;
+    font-size: clamp(5px, 4vw, 35px);
     font-weight: bold;
     margin-bottom: 0px;
 }
 #catrinaSectionText {
-    font-size: 25px;
+    font-size: clamp(5px, 3vw, 30px);
     line-height: 2;
 }
 /* Conferences Section */
@@ -221,13 +220,12 @@ body{
 #conferencesSectionInner {
     display: flex;
     align-items: center;
-    height: 100%;
     background-color: rgba(255, 218, 124, 0.8);
 }
 #conferenceCollectivePhoto {
     margin-left: 30px;
-    height: 65vh;
-    width: 50vw;
+    height: auto;
+    width: clamp(100px, 35vw, 700px);
     transform: translate(-120%);
     transition: all 1s ease;
     opacity: 0;
@@ -253,12 +251,12 @@ body{
     opacity: 1;
 }
 #conferencesSectionTitle {
-    font-size: 35px;
+    font-size: clamp(5px, 4vw, 35px);
     font-weight: bold;
     margin-bottom: 0px;
 }
 #conferencesSectionText {
-    font-size: 25px;
+    font-size: clamp(5px, 3vw, 30px);
     line-height: 2;
 }
 /* Footer */
@@ -273,16 +271,11 @@ body{
 }
 #footer #aboutUs #aboutUsHeader {
     margin-bottom: 0px;
+    font-size: clamp(5px, 4vw, 25px);
 }
 #footer #aboutUs #aboutUsParagraph {
     margin-top: 15px;
-}
-#footer #contactInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    margin-left: auto;
-    margin-right: 20px;
+    font-size: clamp(10px, 1.5vw, 20px);
 }
 #footer #contactInfo #contactInfoHeader {
     margin-left: auto;
@@ -290,4 +283,13 @@ body{
     margin-top: 19.29px;
     margin-bottom: 2px;
     font-weight: bold;
+    font-size: clamp(5px, 4vw, 25px);
+}
+#footer #contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: clamp(10px, 1.5vw, 20px);
 }
