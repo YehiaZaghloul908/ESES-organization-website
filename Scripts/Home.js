@@ -3,17 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#footer").scrollIntoView();
     });
     document.querySelector("#founders").addEventListener("click", () => {
-        document.querySelector("#ownerSection").scrollIntoView({
+        document.querySelector("#ownerSectionInner").scrollIntoView({
             block: "center",
         });
     });
     document.querySelector("#catrinaDropdown").addEventListener("click", () => {
-        document.querySelector("#catrinaSection").scrollIntoView({
+        document.querySelector("#catrinaSectionInner").scrollIntoView({
             block: "center",
         });
     });
     document.querySelector("#conferencesDropdown").addEventListener("click", () => {
-        document.querySelector("#conferencesSection").scrollIntoView({
+        document.querySelector("#conferencesSectionInner").scrollIntoView({
             block: "center",
         });
     });
@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.querySelector("#membership").addEventListener("click", () => {
         window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdmY37plWyQOS83FzgdujhbMFun2MuZVxIJabevAglfocsiTg/viewform?usp=dialog";
+    });
+    window.addEventListener("scroll", () => {
+        let container = document.querySelectorAll(".SectionTextDiv");
+        container.forEach(container => {
+            let containerPosition = container.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight / 1.3;
+            if(containerPosition < screenPosition){
+                container.classList.add("animate");
+            }
+        });
     });
     window.addEventListener("scroll", () => {
         let img = document.querySelector("#abdelraoufImage");
@@ -42,22 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     window.addEventListener("scroll", () => {
-        let container = document.querySelector("#ownerSectionTextDiv");
-        let containerPosition = container.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.3;
-        if(containerPosition < screenPosition){
-            container.classList.add("animate");
-        }
-    });
-    window.addEventListener("scroll", () => {
-        let container = document.querySelector("#catrinaSectionTextDiv");
-        let containerPosition = container.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.3;
-        if(containerPosition < screenPosition){
-            container.classList.add("animate");
-        }
-    });
-    window.addEventListener("scroll", () => {
         let img = document.querySelector("#conferenceCollectivePhoto");
         let container = document.querySelector("#conferencesSectionInner");
         let containerPosition = container.getBoundingClientRect().top;
@@ -66,12 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
             img.classList.add("animate");
         }
     });
-    window.addEventListener("scroll", () => {
-        let container = document.querySelector("#conferencesSectionTextDiv");
-        let containerPosition = container.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.3;
-        if(containerPosition < screenPosition){
-            container.classList.add("animate");
-        }
+    document.querySelector("#conferencesLeftSlider").addEventListener("click", () => {
+        document.querySelector("#conferencesSectionInner").classList.remove("rightSlide");
+        document.querySelector("#conferencesSectionInner").classList.add("leftSlide");
+    });
+    document.querySelector("#conferencesRightSlider").addEventListener("click", () => {
+        document.querySelector("#conferencesSectionInner").classList.remove("leftSlide");
+        document.querySelector("#conferencesSectionInner").classList.add("rightSlide");
     });
 });
