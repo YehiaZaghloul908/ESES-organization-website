@@ -222,7 +222,7 @@ body{
     opacity: 1;
 }
 /* Conferences Section */
-#conferenceCollectivePhoto {
+#conferenceCollectiveStaffPhoto {
     margin-left: 30px;
     height: auto;
     width: clamp(100px, 35vw, 700px);
@@ -234,40 +234,47 @@ body{
     transform: translate(0%);
     opacity: 1;
 }
+#the-9th-international-collectivePhoto {
+    margin-left: 30px;
+    height: auto;
+    width: clamp(100px, 35vw, 700px);
+    transform: translate(0%);
+    transition: all 1s ease;
+}
 /* Footer */
-#footer {
-    display: flex;
-    margin-top: 30px;
+footer {
+    padding: 2rem 1rem 1rem 1rem;
     background-color: #facc58;
-    width: 100%;
 }
-#footer #aboutUs {
-    width: 50%;
-    margin-left: 10px;
+#footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: auto;
 }
-#footer #aboutUs #aboutUsHeader {
-    margin-bottom: 0px;
-    font-size: clamp(5px, 4vw, 25px);
-}
-#footer #aboutUs #aboutUsParagraph {
-    margin-top: 15px;
-    font-size: clamp(10px, 1.5vw, 20px);
-}
-#footer #contactInfo #contactInfoHeader {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 19.29px;
-    margin-bottom: 2px;
-    font-weight: bold;
-    font-size: clamp(5px, 4vw, 25px);
-}
-#footer #contactInfo {
+#footer-contact {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    margin-left: auto;
-    margin-right: 20px;
-    font-size: clamp(10px, 1.5vw, 20px);
+}
+#footer-about {
+    width: 50%;
+}
+#footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+}
+#aboutUsHeader {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+#contactInfoHeader {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 /* SliderAnimations */
 #conferencesSectionInner.leftSlide{
@@ -279,4 +286,34 @@ body{
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform: translate(120%);
     opacity: 0;
+}
+/* 9th International Conference Slide */
+#conferencesSection {
+    position: relative;
+}
+#the9thInternConContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translate(-120%);
+}
+#the9thInternConContainer.rightSlide{
+    transform: translate(0%);
+    opacity: 1;
+}
+#the9thInternConContainer.leftSlide{
+    transform: translate(-120%);
+    opacity: 0;
+}
+#the9thSectionTextDiv{
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+#the9thSectionText {
+    font-size: clamp(5px, 2vw, 27px);
 }

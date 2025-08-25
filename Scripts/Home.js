@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#contactUs").addEventListener("click", () => {
-        document.querySelector("#footer").scrollIntoView();
+        document.querySelector("footer").scrollIntoView();
     });
     document.querySelector("#founders").addEventListener("click", () => {
         document.querySelector("#ownerSectionInner").scrollIntoView({
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     window.addEventListener("scroll", () => {
-        let img = document.querySelector("#conferenceCollectivePhoto");
+        let img = document.querySelector("#conferenceCollectiveStaffPhoto");
         let container = document.querySelector("#conferencesSectionInner");
         let containerPosition = container.getBoundingClientRect().top;
         let screenPosition = window.innerHeight / 1.3;
@@ -63,9 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#conferencesLeftSlider").addEventListener("click", () => {
         document.querySelector("#conferencesSectionInner").classList.remove("rightSlide");
         document.querySelector("#conferencesSectionInner").classList.add("leftSlide");
+        document.querySelector("#the9thInternConContainer").classList.remove("rightSlide");
+        document.querySelector("#the9thInternConContainer").classList.add("leftSlide");
     });
     document.querySelector("#conferencesRightSlider").addEventListener("click", () => {
         document.querySelector("#conferencesSectionInner").classList.remove("leftSlide");
         document.querySelector("#conferencesSectionInner").classList.add("rightSlide");
+        document.querySelector("#the9thInternConContainer").classList.remove("leftSlide");
+        document.querySelector("#the9thInternConContainer").classList.add("rightSlide");
     });
 });
