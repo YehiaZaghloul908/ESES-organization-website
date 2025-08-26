@@ -319,6 +319,27 @@ footer {
 #the9thSectionText {
     font-size: clamp(5px, 2vw, 25px);
 }
+/* Sliding Text */
+#announcementsText {
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    font-size: clamp(10px, 3vw, 36px);
+    white-space: nowrap; /* prevents text wrapping */
+}
+
+.finalPosition {
+    transform: translateX(-100vw);
+    transition: transform 10s linear;
+}
+
+.resetPosition {
+    transform: translateX(100vw);
+    transition: none; /* no animation, instant reset */
+}
 @media (max-width: 768px) {
     #abdelraoufImage {
         width: 80%;
