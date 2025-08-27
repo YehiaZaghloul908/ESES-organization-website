@@ -91,3 +91,11 @@ slideAnnouncements();
 
 // Repeat every 12 seconds (10s slide + 2s gap)
 setInterval(slideAnnouncements, 12000);
+
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('#interactionList');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});

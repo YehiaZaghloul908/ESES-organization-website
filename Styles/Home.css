@@ -108,6 +108,7 @@ body{
     height: 70px;
     width: 100vw;
     z-index: 1000;
+
 }
 #title {
     text-align: center;
@@ -174,6 +175,20 @@ body{
 }
 #activities:hover #blackarrowhead {
     transform: rotate(90deg);
+}
+/* Hamburger menu*/
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
 }
 #content {
     padding: 0px;
@@ -401,5 +416,27 @@ footer {
     .medias img {
         width: 40px;
         height: 40px;
+    }
+    #interactionList {
+        display: none; /* hide menu */
+        flex-direction: column;
+        position: absolute;
+        height: 500px;
+        top: 60px;
+        right: 15px;
+        background: #ffebc3;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    #interactionList.active {
+        display: flex; /* show when toggled */
+    }
+    #navBar {
+        display: flex;
+        justify-content: center;
+    }
+    .hamburger {
+        display: flex; /* show hamburger */
+        justify-content: flex-end;
     }
 }
