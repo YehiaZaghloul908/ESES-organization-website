@@ -1,3 +1,6 @@
+/* * {
+    outline: 1px solid red;
+} */
 html, body {
     height: 100vh;
     margin: 0;
@@ -18,22 +21,24 @@ body{
     flex-direction: column;
 }
 .Section {
-    margin-top: 100px;
     padding: 0px;
-    background-color: rgba(255, 218, 124, 0.8);
+    background-color: rgba(255, 218, 124, 1);
 }
 .SectionInner {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .SectionTextDiv {
     margin-left: 15px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
     max-width: 70%;
+    border-top: 1px solid #444;
     transform: translateY(50%);
     transition: all 1s ease;
     opacity: 0;
@@ -55,18 +60,22 @@ body{
     display: flex;
     justify-content: center;
     gap: 5rem;
-    margin: 5px 0px 10px 0px;
+    margin: 20px 0px 10px 0px;
 }
 .slidersBackground {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px;
+    width: 50px;   /* circle size */
+    height: 50px;  /* circle size */
     border-radius: 50%;
-    /* background-color: rgb(255, 205, 80, 0.8); */
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
-.slidersBackground:hover {
-    background-color: rgba(251, 216, 129, 0.534);
+
+.slidersBackground img:hover {
+    background-color: rgb(253, 211, 105);
+    border-radius: 50%;
 }
 .leftSlider {
     height: auto;
@@ -221,7 +230,6 @@ body{
 }
 /* Conferences Section */
 #conferenceCollectiveStaffPhoto {
-    margin-left: 30px;
     height: auto;
     width: clamp(100px, 35vw, 700px);
     transform: translate(-120%);
@@ -233,7 +241,6 @@ body{
     opacity: 1;
 }
 #the-9th-international-collectivePhoto {
-    margin-left: 30px;
     height: auto;
     width: clamp(100px, 35vw, 700px);
     transform: translate(0%);
@@ -316,9 +323,9 @@ footer {
 #conferencesTextDiv {
     width: 50%;
 }
-#the9thSectionText {
+/* #the9thSectionText {
     font-size: clamp(5px, 2vw, 25px);
-}
+} */
 /* Sliding Text */
 #announcementsText {
     display: flex;
@@ -346,6 +353,16 @@ footer {
         padding-top: 40px;
         margin: 0px;
     }
+    #catrinaPosterContainer {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    #catrinaPoster{
+        width: 80%;
+        margin: 0px;
+    }
     .SectionInner {
         display: flex;
         justify-content: center;
@@ -370,6 +387,7 @@ footer {
     }
     .SectionText {
         width: 100%;
+        font-size: 16px;
     }
     .medias {
         display: flex;
