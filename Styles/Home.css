@@ -1,9 +1,10 @@
 /* * {
     outline: 1px solid red;
 } */
-html, body {
+html,
+body {
     height: 120vh;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     font-family: sans-serif;
     background-color: #fffae3;
@@ -13,24 +14,29 @@ html, body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
 html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
+
 .Section {
     padding: 0px;
     background-color: rgba(255, 218, 124, 1);
 }
+
 .SectionInner {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .SectionTextDiv {
     margin-left: 15px;
     margin-top: 15px;
@@ -44,31 +50,38 @@ body{
     transition: all 1s ease;
     opacity: 0;
 }
+
 .SectionTextDiv .animate {
     transform: translateY(0%);
     opacity: 1;
 }
+
 .SectionTitle {
     margin-bottom: 0px;
     font-size: clamp(5px, 4vw, 35px);
     font-weight: bold;
 }
+
 .SectionText {
     font-size: clamp(5px, 3vw, 30px);
     line-height: 2;
 }
+
 .sectionSlider {
     display: flex;
     justify-content: center;
     gap: 5rem;
     margin: 20px 0px 10px 0px;
 }
+
 .slidersBackground {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;   /* circle size */
-    height: 50px;  /* circle size */
+    width: 50px;
+    /* circle size */
+    height: 50px;
+    /* circle size */
     border-radius: 50%;
     transition: background-color 0.3s ease;
     cursor: pointer;
@@ -78,29 +91,35 @@ body{
     background-color: rgb(253, 211, 105);
     border-radius: 50%;
 }
+
 .leftSlider {
     height: auto;
     width: 50px;
 }
+
 .rightSlider {
     height: auto;
     width: 50px;
     transform: rotate(180deg);
 }
+
 .medias {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-top: 10px;
 }
+
 .medias a {
     width: clamp(30px, 3rem, 50px);
     height: clamp(30px, 3rem, 50px);
 }
+
 .medias img {
     width: clamp(30px, 3rem, 50px);
     height: clamp(30px, 3rem, 50px);
 }
+
 #navBar {
     position: fixed;
     display: flex;
@@ -111,16 +130,19 @@ body{
     z-index: 1000;
 
 }
+
 #title {
     text-align: center;
     font-weight: lighter;
     width: 300px;
     font-size: clamp(5px, 3vw, 25px);
 }
+
 #title a {
     text-decoration: none;
     color: black;
 }
+
 #interactionList {
     display: flex;
     list-style-type: none;
@@ -132,6 +154,7 @@ body{
     align-items: center;
     height: 100%;
 }
+
 #interactionList li {
     display: flex;
     align-items: center;
@@ -139,15 +162,18 @@ body{
     height: 100%;
     cursor: pointer;
 }
-#interactionList li:hover{
+
+#interactionList li:hover {
     background-color: #ffda7c;
 }
+
 #interactionList #activities {
     display: flex;
     position: relative;
     align-items: center;
     gap: 10px;
 }
+
 #interactionList #activities:hover #dropdownmenu {
     display: flex;
     flex-direction: column;
@@ -155,8 +181,9 @@ body{
     margin: 0px;
     max-width: 100%;
     background-color: #fcd267;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 #interactionList #activities #dropdownmenu {
     display: none;
     /* display: flex;
@@ -165,32 +192,37 @@ body{
     margin: 0px;
     max-width: 100%;
     background-color: #fcd267; */
-    
+
     position: absolute;
     top: 100%;
     left: 0;
 }
+
 #blackarrowhead {
     width: 100%;
     height: 10%;
 }
+
 #activities:hover #blackarrowhead {
     transform: rotate(90deg);
 }
+
 /* Hamburger menu*/
 .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
 }
+
 .hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 3px;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
 }
+
 #content {
     padding: 0px;
     margin: 0px;
@@ -199,6 +231,7 @@ body{
     padding-top: 50px;
     flex: 1;
 }
+
 #content #welcomeSection {
     display: flex;
     align-items: center;
@@ -208,17 +241,20 @@ body{
     padding: 0px;
     height: 100vh;
     width: 100%;
-    
+
 }
+
 #content #welcomeSection #welcomeToEsesParagraph {
     margin: 0px;
     font-size: clamp(20px, 10vw, 120px);
     color: white;
 }
+
 #content #welcomeSection #welcomeToEsesParagraphDiscription {
     font-size: clamp(10px, 3vw, 30px);
     color: white;
 }
+
 #abdelraoufImage {
     height: auto;
     margin-left: 30px;
@@ -227,10 +263,12 @@ body{
     transition: all 1s ease;
     opacity: 0;
 }
+
 #ownerSectionInner .animate {
     transform: translate(0%);
     opacity: 1;
 }
+
 /* Catrina Section */
 #catrinaPoster {
     margin-right: 30px;
@@ -240,10 +278,12 @@ body{
     transition: all 1s ease;
     opacity: 0;
 }
+
 #catrinaSectionInner .animate {
     transform: translate(0%);
     opacity: 1;
 }
+
 /* Conferences Section */
 #conferenceCollectiveStaffPhoto {
     height: auto;
@@ -252,21 +292,25 @@ body{
     transition: all 1s ease;
     opacity: 0;
 }
+
 #conferencesSectionInner .animate {
     transform: translate(0%);
     opacity: 1;
 }
+
 #the-9th-international-collectivePhoto {
     height: auto;
     width: clamp(100px, 35vw, 700px);
     transform: translate(0%);
     transition: all 1s ease;
 }
+
 /* Footer */
 footer {
     padding: 2rem 1rem 1rem 1rem;
     background-color: #facc58;
 }
+
 #footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -274,13 +318,16 @@ footer {
     max-width: 1500px;
     margin: auto;
 }
+
 #footer-contact {
     display: flex;
     flex-direction: column;
 }
+
 #footer-about {
     width: 50%;
 }
+
 #footer-bottom {
     text-align: center;
     margin-top: 1rem;
@@ -288,30 +335,36 @@ footer {
     border-top: 1px solid #444;
     padding-top: 1rem;
 }
+
 #aboutUsHeader {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
+
 #contactInfoHeader {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
     font-weight: bold;
 }
+
 /* SliderAnimations */
-#conferencesSectionInner.leftSlide{
+#conferencesSectionInner.leftSlide {
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform: translate(0%);
     opacity: 1;
 }
-#conferencesSectionInner.rightSlide{
+
+#conferencesSectionInner.rightSlide {
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform: translate(120%);
     opacity: 0;
 }
+
 /* 9th International Conference Slide */
 #conferencesSection {
     position: relative;
 }
+
 #the9thInternConContainer {
     position: absolute;
     top: 0;
@@ -320,15 +373,18 @@ footer {
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform: translate(-120%);
 }
-#the9thInternConContainer.rightSlide{
+
+#the9thInternConContainer.rightSlide {
     transform: translate(0%);
     opacity: 1;
 }
-#the9thInternConContainer.leftSlide{
+
+#the9thInternConContainer.leftSlide {
     transform: translate(-120%);
     opacity: 0;
 }
-#the9thSectionTextDiv{
+
+#the9thSectionTextDiv {
     margin-left: 15px;
     display: flex;
     justify-content: center;
@@ -336,9 +392,11 @@ footer {
     height: 100%;
     width: 50%;
 }
+
 #conferencesTextDiv {
     width: 50%;
 }
+
 /* #the9thSectionText {
     font-size: clamp(5px, 2vw, 25px);
 } */
@@ -349,9 +407,14 @@ footer {
     align-items: center;
     position: absolute;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     font-size: clamp(10px, 3vw, 36px);
-    white-space: nowrap; /* prevents text wrapping */
+    white-space: nowrap;
+    /* prevents text wrapping */
+}
+
+.initialPosition {
+    transform: translateX(0%);
 }
 
 .finalPosition {
@@ -361,68 +424,149 @@ footer {
 
 .resetPosition {
     transform: translateX(100vw);
-    transition: none; /* no animation, instant reset */
+    transition: none;
+    /* no animation, instant reset */
 }
+
+/* Staff Section */
+#staff-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px;
+}
+
+#staff-section-title {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    width: 70vw;
+    border-top: 1px solid #444;
+    font-family: cursive;
+}
+
+#staff-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: clamp(5px, 7vw, 80px);
+}
+
+.staff-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.staff-names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-weight: bold;
+    font-size: clamp(16px, 6vw, 29.7px);
+    transition: all 1s ease;
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.staff-names.animate {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.staff-photo {
+    width: 100%;
+    height: auto;
+    transition: all 1s ease;
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.staff-photo.animate {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
-    html, body {
-        background-attachment: scroll; /* fixes weird zoom on phones */
+
+    html,
+    body {
+        background-attachment: scroll;
+        /* fixes weird zoom on phones */
     }
+
     #abdelraoufImage {
         width: 80%;
         padding-top: 40px;
         margin: 0px;
     }
+
     #catrinaPosterContainer {
         padding-top: 10px;
         padding-bottom: 20px;
         display: flex;
         justify-content: center;
     }
-    #catrinaPoster{
+
+    #catrinaPoster {
         width: 80%;
         margin: 0px;
     }
+
     .SectionInner {
         display: flex;
         justify-content: center;
     }
+
     .SectionTitle {
         display: flex;
         justify-content: center;
         text-align: center;
         font-size: 30px;
     }
+
     .SectionTextDiv ul {
         padding: 20px 0px 0px 0px;
         width: 100%;
         font-size: 16px;
     }
+
     .SectionTextDiv {
         width: 90%;
         max-width: 100%;
     }
+
     .SectionInner {
         width: 100%;
     }
+
     .SectionText {
         width: 100%;
         font-size: 16px;
     }
+
     .medias {
         display: flex;
         justify-content: center;
         gap: 10px;
     }
+
     .medias a {
         width: 40px;
         height: 40px;
     }
+
     .medias img {
         width: 40px;
         height: 40px;
     }
+
     #interactionList {
-        display: none; /* hide menu */
+        display: none;
+        /* hide menu */
         flex-direction: column;
         position: absolute;
         height: 500px;
@@ -432,15 +576,35 @@ footer {
         padding: 10px;
         border-radius: 5px;
     }
+
     #interactionList.active {
-        display: flex; /* show when toggled */
+        display: flex;
+        /* show when toggled */
     }
+
     #navBar {
         display: flex;
         justify-content: center;
     }
+
     .hamburger {
-        display: flex; /* show hamburger */
+        display: flex;
+        /* show hamburger */
         justify-content: flex-end;
+    }
+}
+
+@media (max-width: 1000px) {
+    #staff-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    #staff-grid div img {
+        width: 75%;
+        height: auto;
+    }
+
+    .staff-names {
+        font-size: 30px;
     }
 }

@@ -59,6 +59,23 @@ window.addEventListener("scroll", () => {
         img.classList.add("animate");
     }
 });
+window.addEventListener("scroll", () => {
+    let container = document.querySelector("#staff-section");
+    let img = document.querySelectorAll(".staff-photo");
+    let name = document.querySelectorAll(".staff-names");
+    let containerPosition = container.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight / 1.3;
+    img.forEach(img => {
+        if (containerPosition < screenPosition) {
+            img.classList.add("animate");
+        }
+    });
+    name.forEach(name => {
+        if (containerPosition < screenPosition) {
+            name.classList.add("animate");
+        }
+    });
+});
 document.querySelector("#conferencesLeftSlider").addEventListener("click", () => {
     document.querySelector("#conferencesSectionInner").classList.remove("rightSlide");
     document.querySelector("#conferencesSectionInner").classList.add("leftSlide");
@@ -76,6 +93,7 @@ function slideAnnouncements() {
     const announcementText = document.querySelector("#announcementsText");
 
     // Step 1: Instantly reset to right side
+    announcementText.classList.remove("initialPosition");
     announcementText.classList.remove("finalPosition");
     announcementText.classList.add("resetPosition");
 
@@ -97,5 +115,5 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('#interactionList');
 
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+    navLinks.classList.toggle('active');
 });
