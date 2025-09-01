@@ -88,29 +88,6 @@ document.querySelector("#conferencesRightSlider").addEventListener("click", () =
     document.querySelector("#the9thInternConContainer").classList.remove("leftSlide");
     document.querySelector("#the9thInternConContainer").classList.add("rightSlide");
 });
-//slidingText
-function slideAnnouncements() {
-    const announcementText = document.querySelector("#announcementsText");
-
-    // Step 1: Instantly reset to right side
-    announcementText.classList.remove("initialPosition");
-    announcementText.classList.remove("finalPosition");
-    announcementText.classList.add("resetPosition");
-
-    // Step 2: After a small delay, start sliding left
-    setTimeout(() => {
-        announcementText.classList.remove("resetPosition");
-        announcementText.classList.add("finalPosition");
-    }, 50); // tiny delay so browser registers the reset
-}
-
-// Start immediately
-slideAnnouncements();
-
-// Repeat every 12 seconds (10s slide + 2s gap)
-setInterval(slideAnnouncements, 12000);
-
-
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('#interactionList');
 
