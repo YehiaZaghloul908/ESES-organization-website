@@ -1,6 +1,6 @@
-/* * {
+* {
     outline: 1px solid red;
-} */
+}
 
 html,
 body {
@@ -18,6 +18,14 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 0, 190);
 }
 
 .Section {
@@ -123,7 +131,6 @@ body {
     height: 70px;
     width: 100vw;
     z-index: 1000;
-
 }
 
 #title {

@@ -1,0 +1,84 @@
+* {
+    outline: 1px solid red;
+}
+
+html,
+body {
+    height: 120vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgba(255, 218, 124, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#navBar {
+    position: fixed;
+    display: flex;
+    background-color: #facc58;
+    align-items: center;
+    height: 70px;
+    width: 100vw;
+    z-index: 1000;
+}
+
+#title {
+    text-align: center;
+    font-weight: lighter;
+    width: 300px;
+    font-size: clamp(5px, 3vw, 25px);
+}
+
+#title a {
+    text-decoration: none;
+    color: black;
+}
+
+#content {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+    flex: 1;
+}
+
+#content #welcomeSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../Images/9th_conference_collective_photo.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.head-line {
+    margin: 30px 0px 50px 70px;
+}
+
+.gallery-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    max-width: 350px;
+}
